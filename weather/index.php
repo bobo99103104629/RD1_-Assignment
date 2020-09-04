@@ -1,5 +1,8 @@
 <?php
-
+require ('test/weather.php');
+require ('test/db.php');
+require ('test/insert.php');
+$bg_url='img/斗六.jpg';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +18,10 @@
 </head>
 <body>
     <?php include ('navbar.php') ?>
-    <div class = "container" text></div>
     <?php include ('weather.php') ?>
+    <div class = "container"></div>
+    <div class= "text-center">  
+
     <?php include ('footer.php') ?>
 </body>
 </html>

@@ -12,9 +12,7 @@
       <!-- 靠左 -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a class="nav-link " href="index.php">
-          沒有
-          </a>
+
         </li>
         
       </ul>

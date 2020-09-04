@@ -1,44 +1,52 @@
 <?php
+$sql = "INSERT INTO `weather`.CITY (citySite, cityName)
+VALUES  ('基隆', '基隆市'),
+        ('臺北', '臺北市'),
+        ('板橋', '新北市'),
+        ('新屋', '桃園市'),
+        ('香山', '新竹市'),
+        ('新竹', '新竹縣'),
+        ('苗栗', '苗栗縣'),
+        ('臺中', '臺中市'),
+        ('田中', '彰化縣'),
+        ('日月潭', '南投縣'),
+        ('斗六', '雲林縣'),
+        ('嘉義', '嘉義市'),
+        ('阿里山', '嘉義縣'),
+        ('臺南', '臺南市'),
+        ('高雄', '高雄市'),
+        ('恆春', '屏東縣'),
+        ('宜蘭', '宜蘭縣'),
+        ('花蓮', '花蓮縣'),
+        ('臺東', '臺東縣'),
+        ('澎湖', '澎湖縣'),
+        ('金門', '金門縣'),
+        ('馬祖', '連江縣');";   
+$result = $conn->query($sql);  
 
-$sql = "CREATE TABLE MEMBER(
-    ID VARCHAR(20) PRIMARY KEY,
-    Password VARCHAR(128) NOT NULL,
-    Name VARCHAR(12) NOT NULL,
-    Email VARCHAR(30) NOT NULL,
-    Phone VARCHAR(10) NOT NULL,
-    RegDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    Birth DATE,
-    Gender ENUM('M', 'F', 'N'),
-    Address VARCHAR(100),
-    Position ENUM('S', 'A', 'C') NOT NULL
-    );";
-$result = $conn->query($sql);
 
-$sql = "CREATE TABLE PRODUCT(
-    ID INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(30) NOT NULL,
-    State ENUM('in_stock', 'out_of_stock', 'removed_from_shelves'),
-    Stock INT(7) UNSIGNED NOT NULL,
-    Price INT(10) UNSIGNED NOT NULL,
-    Img VARCHAR(100) NOT NULL,
-    Info VARCHAR(300),
-    DID INT(7) UNSIGNED,
-    CategoryID INT(7) UNSIGNED NOT NULL
-    );";   
-    $result = $conn->query($sql);
-
-$sql = "INSERT INTO MEMBER(ID, Password, Name, Email, Phone, Birth, Gender, Position, Address)
-VALUE('admin', '21232f297a57a5a743894a0e4a801fc3', '管理員', 'admin@gmail.com', '0912345678', '1911-10-10', 'M', 'A','台中市西屯區市政北二路二段238號');";   
-    $result = $conn->query($sql);  
-
-$sql = "CREATE TABLE CATEGORY(
-    ID INT(7) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    Name VARCHAR(10) NOT NULL UNIQUE);";   
-    $result = $conn->query($sql);  
-
-$sql = "INSERT INTO CATEGORY(Name) Value('綠茶');";   
-    $result = $conn->query($sql);      
-
-$sql = "alter table tablename auto_increment = 1;";   
-    $result = $conn->query($sql);       
+$sql = "INSERT INTO `weather`.TODAY (citySite)
+VALUES  ('基隆'),
+        ('臺北'),
+        ('板橋'),
+        ('新屋'),
+        ('香山'),
+        ('新竹'),
+        ('苗栗'),
+        ('臺中'),
+        ('田中'),
+        ('日月潭'),
+        ('斗六'),
+        ('嘉義'),
+        ('阿里山'),
+        ('臺南'),
+        ('高雄'),
+        ('恆春'),
+        ('宜蘭'),
+        ('花蓮'),
+        ('臺東'),
+        ('澎湖'),
+        ('金門'),
+        ('馬祖');";   
+$result = $conn->query($sql);     
 ?>

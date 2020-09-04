@@ -6,7 +6,7 @@ if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST']== '127.0.0.1'){
   define('db_host',     'localhost', false); // 資料庫host
   define('db_username', 'root',     false); // 資料庫用戶名
   define('db_password', '',         false); // 資料庫密碼
-  define('db_name',     'CITY',     false); // 資料庫名稱
+  define('db_name',     'weather',     false); // 資料庫名稱
  }else{
   // 若當前主機在遠端上
   // 建立 'host_info.php'，如上方格式定義資料庫資訊。

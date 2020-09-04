@@ -1,4 +1,4 @@
-INSERT INTO CITY (citySit, cityName)
+INSERT INTO CITY (citySite, cityName)
 VALUES ('基隆', '基隆市'),
        ('臺北', '臺北市'),
        ('板橋', '新北市'),
@@ -21,7 +21,7 @@ VALUES ('基隆', '基隆市'),
        ('澎湖', '澎湖縣'),
        ('金門', '金門縣'),
        ('馬祖', '連江縣');
-INSERT INTO TODAY (citySit)
+INSERT INTO TODAY (citySite)
 VALUES ('基隆'),
        ('臺北'),
        ('板橋'),
