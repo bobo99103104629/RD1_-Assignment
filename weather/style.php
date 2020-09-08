@@ -5,6 +5,5 @@
 <!-- https://material.io/icons/  -->
 <link rel="stylesheet" href="css/material-icon.css" >
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!-- 自定義樣式 -->
-<link rel="stylesheet" href="css/style.css">
+
 

@@ -12,6 +12,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>demo</title>
 </head>
 <body>
@@ -50,7 +52,7 @@
 </div>
 <div>
     <div class= "text-center">
-      <button name="submit" type="submit" class="btn btn-primary">當前天氣</button>
+      <button name="submit" type="submit" data-loading-text="Loading..." class="btn btn-primary">當前天氣</button>
       <button name="submit2" type="submit" class="btn btn-primary">未來兩天天氣</button>
       <button name="submit3" type="submit" class="btn btn-primary">一週天氣</button>
       <button name="submit4" type="submit" class="btn btn-primary">累積雨量</button>
@@ -60,7 +62,16 @@
 </body>
 </div>
 </form>
-
+<script>
+    $(function() {
+        $(".btn").click(function(){
+            $(this).button('loading').delay(1000).queue(function() {
+            // $(this).button('reset');
+            // $(this).dequeue(); 
+            });
+        });
+    });  
+</script>
 <div class= "text-center">
 <div background-size: cover; background-position:center center; background-attachment:fixed;>
 <?php  

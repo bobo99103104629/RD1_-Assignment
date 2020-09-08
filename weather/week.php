@@ -25,7 +25,7 @@ if (isset($_POST["submit3"])) {
         $strtime = $value->startTime;
         $endtime = $value->endTime;
         $weather = $value->elementValue[0]->value;
-        echo "開始時間:".$strtime."<br>";
+        echo "開始時間：".$strtime."<br>";
         echo "結束時間：".$endtime ."<br>";
         echo $weather."<hr>";
         

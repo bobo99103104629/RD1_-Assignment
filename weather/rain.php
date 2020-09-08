@@ -24,7 +24,6 @@ if (isset($_POST["submit4"])) {
     require("connDB.php");
     mysqli_query($link, $sql);
     foreach ($content->records->location as $key => $value){ 
-        
         if ($value->parameter[0]->parameterValue == $cityName){            
         $allSite = $value->locationName;         
         $cityName = $value->parameter[0]->parameterValue;
@@ -47,7 +46,7 @@ if (isset($_POST["submit4"])) {
         }else{
             echo "24小時雨量：當前沒有數據<br>";
         }
-        echo "更新時間".$obsTime."<hr>";      
+        echo "更新時間：".$obsTime."<hr>";      
         $sql = "
         INSERT INTO rain(cityName,allSite,town,rainHour,rainDay,obsTime)
         VALUES( 
